@@ -6,7 +6,7 @@
 Summary: portable command line archive file manager
 Name: %{name}
 Version: %{version}
-Release: %{release}
+Release: %mkrel %{release}
 Source0: %{name}-%{unmangled_version}.tar.gz
 License: GPL
 Group: Development/Libraries
