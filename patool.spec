@@ -3,7 +3,7 @@
 %define unmangled_version 0.10
 %define release 1
 
-Summary: portable command line archive file manager
+Summary: Portable command line archive file manager
 Name: %{name}
 Version: %{version}
 Release: %mkrel %{release}
@@ -13,7 +13,6 @@ Group: Development/Libraries
 BuildRoot: %{_tmppath}/%{name}-%{version}-%{release}-buildroot
 Prefix: %{_prefix}
 BuildArch: noarch
-Vendor: Bastian Kleineidam <calvin@users.sourceforge.net>
 Url: http://patool.sourceforge.net/
 
 %description
