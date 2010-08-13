@@ -1,7 +1,7 @@
 %define name patool
 %define version 0.10
 %define unmangled_version 0.10
-%define release 1
+%define release 2
 
 Summary: Portable command line archive file manager
 Name: %{name}
@@ -14,6 +14,8 @@ BuildRoot: %{_tmppath}/%{name}-%{version}-%{release}-buildroot
 Prefix: %{_prefix}
 BuildArch: noarch
 Url: http://patool.sourceforge.net/
+BuildRequires: python
+BuildRequires: python-setuptools
 
 %description
 Various archive types can be created, extracted, tested and listed by
