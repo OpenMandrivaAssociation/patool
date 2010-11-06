@@ -1,21 +1,18 @@
-%define name patool
-%define version 0.10
-%define unmangled_version 0.10
-%define release 2
+%define name			patool
+%define version			0.11
+%define release			1
 
-Summary: Portable command line archive file manager
-Name: %{name}
-Version: %{version}
-Release: %mkrel %{release}
-Source0: %{name}-%{unmangled_version}.tar.gz
-License: GPL
-Group: Archiving/Other
-BuildRoot: %{_tmppath}/%{name}-%{version}-%{release}-buildroot
-Prefix: %{_prefix}
-BuildArch: noarch
-Url: http://patool.sourceforge.net/
-BuildRequires: python
-BuildRequires: python-setuptools
+Summary:	Portable command line archive file manager
+Name:		%{name}
+Version:	%{version}
+Release:	%mkrel %{release}
+Source0:	%{name}-%{version}.tar.gz
+License:	GPLv3+
+Group:		Archiving/Other
+BuildArch:	noarch
+Url:		http://patool.sourceforge.net/
+BuildRequires:	python
+BuildRequires:	python-setuptools
 
 %description
 Various archive types can be created, extracted, tested and listed by
@@ -34,19 +31,23 @@ applications to handle those archive formats (for example bzip2 for
 BZIP2 archives).
 
 %prep
-%setup -n %{name}-%{unmangled_version}
+%setup -n %{name}-%{version}
 
 %build
 %{__python} setup.py build
 
 %install
-%{__python} setup.py install -O1 --skip-build --root %{buildroot} --install-purelib=%py_platsitedir
+%{__python} setup.py install \
+	-O1 \
+	--skip-build \
+	--root %{buildroot}
 
 %clean
-rm -rf $RPM_BUILD_ROOT
+rm -rf %{buildroot}
 
 %files
 %defattr(-,root,root)
-%{_bindir}/patool
-%{_mandir}/*
-%{py_platsitedir}/*
+%{_bindir}/%{name}
+%{_mandir}/man1/%{name}.*
+%{python_sitelib}/patoolib
+%{python_sitelib}/patool-%{version}-py%{py_ver}.egg-info
