@@ -1,5 +1,5 @@
 %define name			patool
-%define version			0.11
+%define version			0.13
 %define release			1
 
 Summary:	Portable command line archive file manager
