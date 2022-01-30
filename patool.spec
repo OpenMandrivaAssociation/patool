@@ -1,5 +1,5 @@
 Summary:	Portable command line archive file manager
-Name:		patol
+Name:		patool
 Version:	1.12
 Release:	1
 Url:		http://patool.sourceforge.net/
