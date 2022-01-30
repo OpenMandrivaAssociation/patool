@@ -1,18 +1,15 @@
-%define name			patool
-%define version			0.13
-%define release			2
-
 Summary:	Portable command line archive file manager
-Name:		%{name}
-Version:	%{version}
-Release:	%mkrel %{release}
-Source0:	%{name}-%{version}.tar.gz
+Name:		patool
+Version:	1.12
+Release:	1
+Url:		http://patool.sourceforge.net/
+Source0:	https://pypi.python.org/packages/source/p/python-patool/%{name}-%{version}.tar.gz
 License:	GPLv3+
 Group:		Archiving/Other
 BuildArch:	noarch
-Url:		http://patool.sourceforge.net/
+
 BuildRequires:	python
-BuildRequires:	python-setuptools
+BuildRequires:	python3dist(setuptools)
 
 %description
 Various archive types can be created, extracted, tested and listed by
@@ -42,8 +39,6 @@ BZIP2 archives).
 	--skip-build \
 	--root %{buildroot}
 
-%clean
-rm -rf %{buildroot}
 
 %files
 %defattr(-,root,root)
@@ -51,6 +46,8 @@ rm -rf %{buildroot}
 %{_mandir}/man1/%{name}.*
 %{python_sitelib}/patoolib
 %{python_sitelib}/patool-%{version}-py%{py_ver}.egg-info
+%{python_sitelib}/__pycache__/
+%{python_sitelib}/_patool_configdata.py
 
 
 %changelog
