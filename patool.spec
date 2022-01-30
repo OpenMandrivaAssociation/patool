@@ -46,6 +46,8 @@ BZIP2 archives).
 %{_mandir}/man1/%{name}.*
 %{python_sitelib}/patoolib
 %{python_sitelib}/patool-%{version}-py%{py_ver}.egg-info
+%{python_sitelib}/__pycache__/
+%{python_sitelib}/_patool_configdata.py
 
 
 %changelog
