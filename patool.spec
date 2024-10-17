@@ -2,7 +2,7 @@ Summary:	Portable command line archive file manager
 Name:		patool
 Version:	1.12
 Release:	3
-Url:		http://patool.sourceforge.net/
+Url:		https://patool.sourceforge.net/
 Source0:	https://pypi.python.org/packages/source/p/python-patool/%{name}-%{version}.tar.gz
 License:	GPLv3+
 Group:		Archiving/Other
