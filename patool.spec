@@ -1,9 +1,9 @@
 Summary:	Portable command line archive file manager
 Name:		patool
-Version:	1.12
-Release:	3
-Url:		https://patool.sourceforge.net/
-Source0:	https://pypi.python.org/packages/source/p/python-patool/%{name}-%{version}.tar.gz
+Version:	3.0.1
+Release:	1
+Url:		https://wummel.github.io/patool
+Source0:	https://pypi.python.org/packages/source/p/patool/%{name}-%{version}.tar.gz
 License:	GPLv3+
 Group:		Archiving/Other
 BuildArch:	noarch
@@ -43,29 +43,5 @@ BZIP2 archives).
 %files
 %defattr(-,root,root)
 %{_bindir}/%{name}
-%{_mandir}/man1/%{name}.*
 %{python_sitelib}/patoolib
 %{python_sitelib}/patool-%{version}-py%{py_ver}.egg-info
-%{python_sitelib}/_patool_configdata.py
-
-
-%changelog
-* Wed Mar 16 2011 Stéphane Téletchéa <steletch@mandriva.org> 0.13-1mdv2011.0
-+ Revision: 645373
-- update to new version 0.13
-
-* Sat Nov 06 2010 Jani Välimaa <wally@mandriva.org> 0.11-1mdv2011.0
-+ Revision: 594246
-- new version 0.11
-- install files to a correct location
-- fix license and clean spec
-
-* Fri Aug 13 2010 Shlomi Fish <shlomif@mandriva.org> 0.10-2mdv2011.0
-+ Revision: 569471
-- Add missing BuildRequires (thanks to Anssi)
-- Change to a more apprporiate group
-- Correct some rpm errors - no Vendor
-- Changed to the Mandriva release
-- import patool
-
-
