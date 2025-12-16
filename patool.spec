@@ -1,7 +1,7 @@
 Summary:	Portable command line archive file manager
 Name:		patool
-Version:	4.0.2
-Release:	2
+Version:	4.0.3
+Release:	1
 Url:		https://wummel.github.io/patool
 Source0:	https://pypi.python.org/packages/source/p/patool/%{name}-%{version}.tar.gz
 License:	GPLv3+
